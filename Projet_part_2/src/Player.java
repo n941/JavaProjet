@@ -6,7 +6,7 @@ public class Player {
 	private int score;
 	private int pdv;
 	private int nb_clef;
-	private int choiseQtElement[]; //Table des quantité d'Element Choix par l'utilisateur
+	protected int choix_usr[]; //Table des quantite d'Element Choix par l'utilisateur
 	
 	enum element{
 		herbe, fleur, arbre, rocher, clef, piece,
@@ -17,7 +17,8 @@ public class Player {
 	//protected int id;
 	//constructeur
 	Player(){
-	
+		int i=0;
+		this.choix_usr=new int[9];
 		this.score=0;
 		this.pdv=10;
 		this.nb_clef=0;
@@ -25,13 +26,11 @@ public class Player {
 		System.out.println("Quel est votre nom ?");
 		this.nom=new Scanner(System.in).nextLine();
 		
-		int i=0;
-		int  choiseQtElement[]= new int [9];
-		//String tab[]= {"pieces","monstre", "candenas", "clef","piege",
-		//		"rocher","arbre"};
+		
+		
 		Scanner saisi= new Scanner(System.in);
 		
-		
+		/*
 		for(element Element: element.values())
 		{
 			do {
@@ -44,7 +43,7 @@ public class Player {
 		{
 			System.out.println("x:"+x);
 		}
-		//this.id=ID;//a generer a la creation du joueur
+		//this.id=ID;//a generer a la creation du joueur*/
 	}
 	//Affichage generique
 	public String toString() {
@@ -70,8 +69,9 @@ public class Player {
 		this.nb_clef = nb_clef;
 	}
 
-	public int [] choixQtElementConsole() {
-		return choiseQtElement;
+	public int[] choixQtElementConsole() {
+		
+		return this.choix_usr;
 	}
 	
 }

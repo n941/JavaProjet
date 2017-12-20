@@ -6,6 +6,7 @@ public abstract class AbstraitBonus extends Element implements Bonus {
 		super(p);
 		// TODO Auto-generated constructor stub
 	}
+	public abstract int gain();
 
 	
 	

@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.EnumSet;
 import java.util.*; 
 import java.*;
 
@@ -34,14 +32,19 @@ public class Carte {
 	 * @param args
 	 */
 	public void InitialiserCarte() {
+		
 		int i,j,r,n,nb_case_init=0;
 		//nt fleur=0, arbre=0, rocher=0, clef=0, piece=0, cadenas=0, piege=0, monstre=0;
 		//int v=0, cpt=0;
 		Point position = new Point();
-		int[] usr_qtE= new int[9];
+	
 		ArrayList<Integer> al_n;
 		//Recuperation de la config de jeu choisi par le joueur
-		usr_qtE=joueur.choixQtElementConsole();
+		int[] usr_qtE= joueur.choixQtElementConsole();
+		
+
+		
+		
 		al_n= new ArrayList<Integer>();//creation d'une liste pour case tableau tirer
 		
 		while(nb_case_init<400){//5
@@ -64,24 +67,25 @@ public class Carte {
 				position.X=i; 
 				position.Y=j;
 
-				r=(int)(Math.random()*9); //tire une valeur comprise entre 0 et 9
+				//r=(int)(Math.random()*9); //tire une valeur comprise entre 0 et 9
+				r=0;
 
 /*info debogue*/		System.out.println("r="+r+" "+"i="+i+" "+"j="+j+" "+"case initialisé:"+nb_case_init);
 /*info debogue*/		System.out.println("Instance en cours:\n"+"Herbe:"+Herbe.herbeInstance+"\tFleur:"+Fleur.fleurInstance+
 											"\tRocher:"+Rocher.rocherInstance+"\tClef:"+Clef.clefInstance+"\tPiece:"+Piece.pieceInstance
 											+"\tCadenas:"+Cadenas.cadenasInstance+"\tPiege:"+Piege.piegeInstance+"\tMonstre:"+Monstre.monstreInstance);
 				
-				if(joueur.choixQtElementConsole()==joueur.choixQtElementConsole());
+				//if(joueur.choixQtElementConsole()==joueur.choixQtElementConsole());
 
 
-				if(		(r==1 && (Fleur.fleurInstance<=(joueur.choixQtElementConsole()[r]))) 
-						|| (r==2 && (Arbre.arbreInstance<=(joueur.choixQtElementConsole()[r]))) 
-						|| (r==3 && (Rocher.rocherInstance<=(joueur.choixQtElementConsole()[r]))) 
-						|| (r==4 && (Clef.clefInstance<(joueur.choixQtElementConsole()[r]))) 
-						|| (r==5 && (Piece.pieceInstance<=(joueur.choixQtElementConsole()[r])) )
-						|| (r==6 && ( (Cadenas.cadenasInstance!=Clef.clefInstance) || (Cadenas.cadenasInstance<=(joueur.choixQtElementConsole()[r])) )) 
-						|| (r==7 && (Piege.piegeInstance <=(joueur.choixQtElementConsole()[r]))) 
-						|| (r==8 && (Monstre.monstreInstance <=(joueur.choixQtElementConsole()[r]))) 
+				if(		(r==1 && (Fleur.fleurInstance<=(usr_qtE[r]))) 
+						|| (r==2 && (Arbre.arbreInstance<=(usr_qtE[r]))) 
+						|| (r==3 && (Rocher.rocherInstance<=(usr_qtE[r]))) 
+						|| (r==4 && (Clef.clefInstance<(usr_qtE[r]))) 
+						|| (r==5 && (Piece.pieceInstance<=(usr_qtE[r])) )
+						|| (r==6 && ( (Cadenas.cadenasInstance!=Clef.clefInstance) || (Cadenas.cadenasInstance<=(usr_qtE[r])) )) 
+						|| (r==7 && (Piege.piegeInstance <=(usr_qtE[r]))) 
+						|| (r==8 && (Monstre.monstreInstance <=(usr_qtE[r]))) 
 						){//1*/
 					//Creations des Objets
 					switch(r) {
