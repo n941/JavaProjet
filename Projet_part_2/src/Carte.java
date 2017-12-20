@@ -81,9 +81,9 @@ System.out.println("r:"+r);
 				if/*((r==1 && (Fleur.fleurInstance<(usr_qtE[r])))
 						||(r==2 &&(Arbre.arbreInstance<usr_qtE[r])))
 						||((r==3 && (Rocher.rocherInstance<(usr_qtE[r]))))
-						||*/ (r==4 && (Clef.clefInstance<(usr_qtE[r]))) /*
-						|| (r==5 && (Piece.pieceInstance<=(usr_qtE[r])) )
-						|| (r==6 && ( (Cadenas.cadenasInstance!=Clef.clefInstance) || (Cadenas.cadenasInstance<=(usr_qtE[r])) )) 
+						||*/ (r==4 && (Clef.clefInstance<(usr_qtE[r])))||/* 
+						||(r==5 && (Piece.pieceInstance<=(usr_qtE[r])) )
+						||*/ (r==6 && ( (Cadenas.cadenasInstance!=Clef.clefInstance) || (Cadenas.cadenasInstance<=(usr_qtE[r])) ))))/* 
 						|| (r==7 && (Piege.piegeInstance <=(usr_qtE[r]))) 
 						|| (r==8 && (Monstre.monstreInstance <=(usr_qtE[r]))) */
 						{//1*/
