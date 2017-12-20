@@ -1,6 +1,6 @@
 
 public class Arbre extends AbstraitObstacle {
-static int arbreInstance=0;
+	static int arbreInstance=0;
 	
 	//constructeur
 	Arbre(Point p){

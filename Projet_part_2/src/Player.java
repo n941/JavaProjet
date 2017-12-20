@@ -30,16 +30,16 @@ public class Player {
 		
 		Scanner saisi= new Scanner(System.in);
 		
-		/*
+
 		for(element Element: element.values())
 		{
 			do {
 				System.out.println("Saisir la quantité de "+Element);
-				choiseQtElement[i]=saisi.nextInt();
-			}while(choiseQtElement[i]<5 || choiseQtElement[i]>199);
+				choix_usr[i]=(int)saisi.next().charAt(0)-48;
+			}while(choix_usr[i]<5 || choix_usr[i]>199);
 			i++;
 		}
-		for(int x : choiseQtElement)
+		for(int x : choix_usr)
 		{
 			System.out.println("x:"+x);
 		}

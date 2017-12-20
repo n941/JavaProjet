@@ -67,28 +67,29 @@ public class Carte {
 				position.X=i; 
 				position.Y=j;
 
-				//r=(int)(Math.random()*9); //tire une valeur comprise entre 0 et 9
-				r=0;
+				r=(int)(Math.random()*8); //tire une valeur comprise entre 0 et 9
+				
 
 /*info debogue*/		System.out.println("r="+r+" "+"i="+i+" "+"j="+j+" "+"case initialisé:"+nb_case_init);
 /*info debogue*/		System.out.println("Instance en cours:\n"+"Herbe:"+Herbe.herbeInstance+"\tFleur:"+Fleur.fleurInstance+
-											"\tRocher:"+Rocher.rocherInstance+"\tClef:"+Clef.clefInstance+"\tPiece:"+Piece.pieceInstance
-											+"\tCadenas:"+Cadenas.cadenasInstance+"\tPiege:"+Piege.piegeInstance+"\tMonstre:"+Monstre.monstreInstance);
+										"\tRocher:"+Rocher.rocherInstance+"\tClef:"+Clef.clefInstance+"\tPiece:"+Piece.pieceInstance
+										+"\tCadenas:"+Cadenas.cadenasInstance+"\tPiege:"+Piege.piegeInstance+"\tMonstre:"+Monstre.monstreInstance);
 				
 				//if(joueur.choixQtElementConsole()==joueur.choixQtElementConsole());
-
-
-				if(		(r==1 && (Fleur.fleurInstance<=(usr_qtE[r]))) 
-						|| (r==2 && (Arbre.arbreInstance<=(usr_qtE[r]))) 
-						|| (r==3 && (Rocher.rocherInstance<=(usr_qtE[r]))) 
-						|| (r==4 && (Clef.clefInstance<(usr_qtE[r]))) 
+System.out.println("r:"+r);
+				
+				if/*((r==1 && (Fleur.fleurInstance<(usr_qtE[r])))
+						||(r==2 &&(Arbre.arbreInstance<usr_qtE[r])))
+						||((r==3 && (Rocher.rocherInstance<(usr_qtE[r]))))
+						||*/ (r==4 && (Clef.clefInstance<(usr_qtE[r]))) /*
 						|| (r==5 && (Piece.pieceInstance<=(usr_qtE[r])) )
 						|| (r==6 && ( (Cadenas.cadenasInstance!=Clef.clefInstance) || (Cadenas.cadenasInstance<=(usr_qtE[r])) )) 
 						|| (r==7 && (Piege.piegeInstance <=(usr_qtE[r]))) 
-						|| (r==8 && (Monstre.monstreInstance <=(usr_qtE[r]))) 
-						){//1*/
+						|| (r==8 && (Monstre.monstreInstance <=(usr_qtE[r]))) */
+						{//1*/
 					//Creations des Objets
 					switch(r) {
+					
 					case 0:
 						tab[i][j]= new Herbe(position);
 						
